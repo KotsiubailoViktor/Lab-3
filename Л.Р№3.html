@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Форма замовлення піци</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .section {
+    border: 2px solid #000000;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  .form-container {
+    border: 3px solid #000000;
+    padding: 15px;
+    margin: 10px auto;
+    width: fit-content;
+  }
+  .form-title {
+    text-align: center;
+  }
+  .section label,
+  .section p {
+    font-weight: bold;
+  }
+  .button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .button:hover {
+    background-color: #45a049;
+  }
+  input[type=text],
+  select,
+  textarea {
+    width: calc(100% - 24px);
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    box-sizing: border-box;
+  }
+</style>
+</head>
+<body>
+<div class="form-container">
+  <h2 class="form-title">Форма замовлення піци</h2>
+  <form id="pizzaOrderForm">
+    <div class="section">
+      <label for="name">Ім'я:</label><br>
+      <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я" required><br>
+    </div>
+    
+    <div class="section">
+      <p>Топінг для піци:</p>
+      <input type="checkbox" id="meat" name="topping" value="М'ясна">
+      <label for="meat">М'ясна</label><br>
+      <input type="checkbox" id="vegetarian" name="topping" value="Вегетаріанська">
+      <label for="vegetarian">Вегетаріанська</label><br>
+      <input type="checkbox" id="hawaiian" name="topping" value="Гавайська">
+      <label for="hawaiian">Гавайська</label><br>
+    </div>
+
+    <div class="section">
+      <label for="sauce">Соус для піци:</label><br>
+      <select id="sauce" name="sauce" required>
+        <option value="Tomato">Томатний</option>
+        <option value="BBQ">Барбекю</option>
+        <option value="Pesto">Песто</option>
+        <option value="Alfredo">Альфредо</option>
+      </select><br>
+    </div>
+
+    <div class="section">
+      <p>Додаткові опції:</p>
+      <input type="checkbox" id="extraCheese" name="extra" value="Додатковий сир">
+      <label for="extraCheese">Додатковий сир</label><br>
+      <input type="checkbox" id="glutenFree" name="extra" value="Безглютенова основа">
+      <label for="glutenFree">Безглютенова основа</label><br>
+    </div>
+
+    <div class="section">
+      <label for="instructions">Інструкції для доставки:</label><br>
+      <textarea id="instructions" name="instructions" rows="4" cols="50" placeholder="Введіть інструкції для доставки"></textarea><br>
+    </div>
+
+    <input type="submit" value="Відправити замовлення" class="button">
+  </form>
+</div>
+</body>
+</html>
